@@ -1,0 +1,9 @@
+{% block content %}
+    <h1>Edit IjasahSma Form</h1>
+    {%  if (form is not null) %}
+    <form action="{{ url('api_1_post_update_ijasah_sma', {'id': ijasah_sma.id}) }}" {{ form_enctype(form) }} method="POST">
+        {{ form_widget(form) }}
+        <input type="submit" value="submit">
+    </form>
+    {% endif %}
+{% endblock %}

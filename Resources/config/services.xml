@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="ais_ijasah_sma.ijasah_sma.handler.class">Ais\IjasahSmaBundle\Handler\IjasahSmaHandler</parameter>
+        <parameter key="ais_ijasah_sma.ijasah_sma.class">Ais\IjasahSmaBundle\Entity\IjasahSma</parameter>
+    </parameters>
+
+    <services>
+        <service id="ais_ijasah_sma.ijasah_sma.handler" class="%ais_ijasah_sma.ijasah_sma.handler.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%ais_ijasah_sma.ijasah_sma.class%</argument>
+            <argument type="service" id="form.factory"></argument>
+        </service>
+    </services>
+
+</container>

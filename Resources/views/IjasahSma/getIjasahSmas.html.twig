@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'ijasah_sma.list'|trans({}, 'AisIjasahSmaBundle') }}</h1>
+
+    <ul id="ijasah_sma-list">
+        {% for ijasah_sma in ijasah_smas %}
+            <li>
+                <a href="{{ path('api_1_get_ijasah_sma', {'id': ijasah_sma.id}) }}">{{ ijasah_sma.pelajaran }}</a>
+                {#[<a href="{{ path('api_1_edit_ijasah_smas', {'id': ijasah_sma.id}) }}">{{ 'ijasah_sma.edit.link'|trans({}, 'AisIjasahSmaBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_ijasah_smas', {'id': ijasah_sma.id}) }}">{{ 'ijasah_sma.remove.link'|trans({}, 'AisIjasahSmaBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'ijasah_sma.list.empty'|trans({}, 'AisIjasahSmaBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_ijasah_sma') }}">{{ 'ijasah_sma.new.link'|trans({}, 'AisIjasahSmaBundle') }}</a>
+    </p>
+{% endblock %}

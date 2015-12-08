@@ -1,0 +1,5 @@
+ais_ijasah_sma_ijasah_sma:
+    type: rest
+    prefix: /v1
+    resource: Ais\IjasahSmaBundle\Controller\IjasahSmaController
+    name_prefix:  api_1_ # naming collision

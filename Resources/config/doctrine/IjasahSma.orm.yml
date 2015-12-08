@@ -1,0 +1,17 @@
+Ais\IjasahSmaBundle\Entity\IjasahSma:
+ type: entity
+ table: ijasah_sma
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  mahasiswa_id:
+   type: integer
+  pelajaran:
+   type: string
+  nilai:
+   type: decimal
+  is_delete:
+   type: boolean
+   nullable: true
