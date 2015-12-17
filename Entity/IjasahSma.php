@@ -141,4 +141,3 @@ class IjasahSma implements IjasahSmaInterface
         return $this->is_delete;
     }
 }
-

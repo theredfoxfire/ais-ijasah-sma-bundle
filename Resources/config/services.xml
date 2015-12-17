@@ -16,6 +16,16 @@
             <argument>%ais_ijasah_sma.ijasah_sma.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        
+        <service id="ais_ijasah_sma.ijasah_sma.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_ijasah_sma.ijasah_sma.class%</argument>
+		</service>
+        
+        <service id="ais_ijasah_sma.ijasah_sma.repository" 
+			class="Ais\IjasahSmaBundle\Repository\IjasahSmaRepository"
+			factory-service="ais_ijasah_sma.ijasah_sma.manager" factory-method="getRepository">
+				<argument>%ais_ijasah_sma.ijasah_sma.class%</argument>
+		</service>
     </services>
 
 </container>

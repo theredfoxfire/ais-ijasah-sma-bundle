@@ -1,6 +1,7 @@
 Ais\IjasahSmaBundle\Entity\IjasahSma:
  type: entity
  table: ijasah_sma
+ repositoryClass: Ais\IjasahSmaBundle\Repository\IjasahSmaRepository
  id:
   id: 
    type: integer
