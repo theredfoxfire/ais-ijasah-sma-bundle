@@ -1,5 +1,5 @@
 {
-    "name" : "Ais/IjasahSmaBundle",
+    "name" : "ais/ijasahsmabundle",
     "description" : "A bundle filled with IjasahSma",
     "type" : "symfony-bundle",
     "authors" : [{
